@@ -14,9 +14,15 @@ namespace JogoDaVelha
     {
         int Xplayer = 0, Oplayer = 0, empatesPontos = 0, rodadas = 0;
         bool turno = true, jogoFinal = false;
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         string[] texto = new string[9];
-        public Form1() 
-        { 
+        public Form1()
+        {
             InitializeComponent();
         }
 
@@ -31,7 +37,7 @@ namespace JogoDaVelha
                 {
                     btn1.Text = "X";
                     texto[buttonIndex] = btn1.Text;
-                    rodadas ++;
+                    rodadas++;
                     turno = !turno;
                     Checagem(1);
                 }
@@ -47,30 +53,57 @@ namespace JogoDaVelha
         }
         void Checagem(int ChecagemPlayer)
         {
-            string _suporte;
+            string suporte = "";
 
             if (ChecagemPlayer == 1)
             {
-                _suporte = "X";
+                suporte = "X";
             }
             else
             {
-                _suporte = "O";
+                suporte = "O";
             }
 
-            for (int Horizontal = 0; Horizontal < 8; Horizontal +=3 )
+            for (int horizontal = 0; horizontal < 8; horizontal += 3)
             {
-                if (_suporte == texto[Horizontal]) 
-                { 
-                    if ((texto[Horizontal] == texto[Horizontal + 1]) && texto[Horizontal] == texto[Horizontal + 2])
+                if (suporte == texto[horizontal])
+                {
+                    if (texto[horizontal] == texto[horizontal + 1] && texto[horizontal] == texto[horizontal + 2])
                     {
-                        MessageBox.Show("Jogador 1 venceu!");
+                        return;
+                    }
+                }
+            }
+            for (int vertical = 0; vertical < 8; vertical++)
+            {
+                if (suporte == texto[vertical])
+                {
+                    if (texto[vertical] == texto[vertical + 3] && texto[vertical] == texto[vertical + 6])
+                    {
                         return;
                     }
                 }
 
             }
+            if (texto[0] == suporte)
+            {
+
+                if (texto[0] == texto[4] && texto[0] == texto[8])
+                {
+                    MessageBox.Show("c#");
+                    return;
+                }
+            }
+            if (texto[2] == suporte)
+            {
+                if (texto[2] == texto[4] && texto[0] == texto[6])
+                {
+                    MessageBox.Show("merda");
+                    return;
+                }
+            }
+
         }
-        
+
     }
 }
