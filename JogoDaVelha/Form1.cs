@@ -28,21 +28,12 @@ namespace JogoDaVelha
 
         private void buttonLimpar_Click(object sender, EventArgs e)
         {
-            btn1.Text = "";
-            btn2.Text = "";
-            btn3.Text = "";
-            btn4.Text = "";
-            btn5.Text = "";
-            btn6.Text = "";
-            btn7.Text = "";
-            btn8.Text = "";
-            btn9.Text = "";
+            foreach (var item in panel1.Controls)
+                ((Button)item).Text = "";
+
             rodadas = 0;
             jogoFinal = false;
-            for (int i = 0; i < 9; i++)
-            {
-                texto[i] = "";
-            }
+            texto = new string[9];
         }
 
 
