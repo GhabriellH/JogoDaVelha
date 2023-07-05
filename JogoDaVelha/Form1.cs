@@ -14,6 +14,10 @@ namespace JogoDaVelha
     {
         int Xplayer = 0, Oplayer = 0, empatesPontos = 0, rodadas = 0;
         bool turno = true, jogoFinal = false;
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -21,10 +25,26 @@ namespace JogoDaVelha
         }
 
         string[] texto = new string[9];
-        public Form1()
+
+        private void buttonLimpar_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+            btn1.Text = "";
+            btn2.Text = "";
+            btn3.Text = "";
+            btn4.Text = "";
+            btn5.Text = "";
+            btn6.Text = "";
+            btn7.Text = "";
+            btn8.Text = "";
+            btn9.Text = "";
+            rodadas = 0;
+            jogoFinal = false;
+            for (int i = 0; i < 9; i++)
+            {
+                texto[i] = "";
+            }
         }
+
 
         private void btn1_Click(object sender, EventArgs e)
         {
@@ -51,6 +71,24 @@ namespace JogoDaVelha
                 }
             }
         }
+        void Vencedor(int PlayerQueGanhou)
+        {
+            jogoFinal = true;
+            if (PlayerQueGanhou == 1)
+            {
+                Xplayer++;
+                Xpontos.Text = Convert.ToString(Xplayer);
+                MessageBox.Show("Jogador X ganhou!");
+                turno = true;
+            }
+            else
+            {
+                Oplayer++;
+                Opontos.Text = Convert.ToString(Oplayer);
+                MessageBox.Show("Jogador O ganhou!");
+                turno = false;
+            }
+        }
         void Checagem(int ChecagemPlayer)
         {
             string suporte = "";
@@ -70,39 +108,47 @@ namespace JogoDaVelha
                 {
                     if (texto[horizontal] == texto[horizontal + 1] && texto[horizontal] == texto[horizontal + 2])
                     {
+                        Vencedor(ChecagemPlayer);
                         return;
                     }
                 }
             }
-            for (int vertical = 0; vertical < 8; vertical++)
+            for (int vertical = 0; vertical < 3; vertical++)
             {
                 if (suporte == texto[vertical])
                 {
                     if (texto[vertical] == texto[vertical + 3] && texto[vertical] == texto[vertical + 6])
                     {
+                        Vencedor(ChecagemPlayer);
                         return;
                     }
                 }
-
             }
             if (texto[0] == suporte)
             {
 
                 if (texto[0] == texto[4] && texto[0] == texto[8])
                 {
-                    MessageBox.Show("c#");
+                    Vencedor(ChecagemPlayer);
                     return;
                 }
             }
             if (texto[2] == suporte)
             {
-                if (texto[2] == texto[4] && texto[0] == texto[6])
+                if (texto[2] == texto[4] && texto[2] == texto[6])
                 {
-                    MessageBox.Show("merda");
+                    Vencedor(ChecagemPlayer);
                     return;
                 }
             }
-
+            if (rodadas == 9 && jogoFinal == false)
+            {
+                empatesPontos++;
+                Empates.Text = Convert.ToString(empatesPontos);
+                MessageBox.Show("Empate!");
+                jogoFinal = true;
+                return;
+            }
         }
 
     }
