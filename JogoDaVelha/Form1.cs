@@ -28,8 +28,8 @@ namespace JogoDaVelha
 
         private void buttonLimpar_Click(object sender, EventArgs e)
         {
-            foreach (var item in panel1.Controls)
-                ((Button)item).Text = "";
+            foreach (Button item in panel1.Controls)
+                item.Text = "";
 
             rodadas = 0;
             jogoFinal = false;
