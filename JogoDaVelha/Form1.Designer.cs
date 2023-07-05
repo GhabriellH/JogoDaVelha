@@ -205,7 +205,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(189, 15);
+            this.label2.Location = new System.Drawing.Point(203, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 26);
@@ -249,7 +249,7 @@
             // 
             this.Opontos.AutoSize = true;
             this.Opontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Opontos.Location = new System.Drawing.Point(229, 38);
+            this.Opontos.Location = new System.Drawing.Point(249, 38);
             this.Opontos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Opontos.Name = "Opontos";
             this.Opontos.Size = new System.Drawing.Size(24, 26);
