@@ -26,6 +26,23 @@ namespace JogoDaVelha
 
         string[] texto = new string[9];
 
+        private void buttonReiniciar_Click(object sender, EventArgs e)
+        {
+            foreach (Button item in panel1.Controls)
+                item.Text = "";
+
+            rodadas = 0;
+            jogoFinal = false;
+            texto = new string[9];
+            Xplayer = 0;
+            Xpontos.Text = Convert.ToString(Xplayer);
+            Oplayer = 0;
+            Opontos.Text = Convert.ToString(Oplayer);
+            empatesPontos = 0;
+            Empates.Text = Convert.ToString(empatesPontos);
+            MessageBox.Show("Reiniciado com sucesso!");
+        }
+
         private void buttonLimpar_Click(object sender, EventArgs e)
         {
             foreach (Button item in panel1.Controls)
