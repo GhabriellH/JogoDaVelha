@@ -184,7 +184,7 @@
             // 
             this.empatePontos.AutoSize = true;
             this.empatePontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empatePontos.Location = new System.Drawing.Point(573, 20);
+            this.empatePontos.Location = new System.Drawing.Point(273, 21);
             this.empatePontos.Name = "empatePontos";
             this.empatePontos.Size = new System.Drawing.Size(143, 37);
             this.empatePontos.TabIndex = 1;
@@ -194,7 +194,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(304, 23);
+            this.label2.Location = new System.Drawing.Point(533, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 37);
             this.label2.TabIndex = 1;
@@ -214,7 +214,7 @@
             // 
             this.Empates.AutoSize = true;
             this.Empates.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empates.Location = new System.Drawing.Point(639, 58);
+            this.Empates.Location = new System.Drawing.Point(326, 58);
             this.Empates.Name = "Empates";
             this.Empates.Size = new System.Drawing.Size(35, 37);
             this.Empates.TabIndex = 0;
@@ -234,7 +234,7 @@
             // 
             this.Opontos.AutoSize = true;
             this.Opontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Opontos.Location = new System.Drawing.Point(374, 58);
+            this.Opontos.Location = new System.Drawing.Point(588, 58);
             this.Opontos.Name = "Opontos";
             this.Opontos.Size = new System.Drawing.Size(35, 37);
             this.Opontos.TabIndex = 0;
@@ -242,30 +242,33 @@
             // 
             // buttonLimpar
             // 
+            this.buttonLimpar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.buttonLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLimpar.Location = new System.Drawing.Point(12, 442);
             this.buttonLimpar.Name = "buttonLimpar";
             this.buttonLimpar.Size = new System.Drawing.Size(361, 51);
             this.buttonLimpar.TabIndex = 2;
             this.buttonLimpar.Text = "Limpar";
-            this.buttonLimpar.UseVisualStyleBackColor = true;
+            this.buttonLimpar.UseVisualStyleBackColor = false;
             this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
             // 
             // buttonReiniciar
             // 
+            this.buttonReiniciar.BackColor = System.Drawing.Color.Red;
             this.buttonReiniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReiniciar.Location = new System.Drawing.Point(393, 442);
             this.buttonReiniciar.Name = "buttonReiniciar";
             this.buttonReiniciar.Size = new System.Drawing.Size(343, 49);
             this.buttonReiniciar.TabIndex = 3;
             this.buttonReiniciar.Text = "Reiniciar";
-            this.buttonReiniciar.UseVisualStyleBackColor = true;
+            this.buttonReiniciar.UseVisualStyleBackColor = false;
             this.buttonReiniciar.Click += new System.EventHandler(this.buttonReiniciar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(772, 617);
             this.Controls.Add(this.buttonReiniciar);
             this.Controls.Add(this.buttonLimpar);
