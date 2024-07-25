@@ -28,25 +28,38 @@ namespace JogoDaVelha
 
         private void buttonReiniciar_Click(object sender, EventArgs e)
         {
+            int teste = rodadas;
             foreach (Button item in panel1.Controls)
                 item.Text = "";
+            if (rodadas == 0 && Xplayer == 0 && Oplayer == 0 && empatesPontos == 0)
+                MessageBox.Show("Não exite rodadas para ser reiniciada!");
+           
+            else
+            {
+                rodadas = 0;
+                jogoFinal = false;
+                texto = new string[9];
+                Xplayer = 0;
+                Xpontos.Text = Convert.ToString(Xplayer);
+                Oplayer = 0;
+                Opontos.Text = Convert.ToString(Oplayer);
+                empatesPontos = 0;
+                Empates.Text = Convert.ToString(empatesPontos);
+                MessageBox.Show("Reiniciado com sucesso!");
+            }
+        }
 
-            rodadas = 0;
-            jogoFinal = false;
-            texto = new string[9];
-            Xplayer = 0;
-            Xpontos.Text = Convert.ToString(Xplayer);
-            Oplayer = 0;
-            Opontos.Text = Convert.ToString(Oplayer);
-            empatesPontos = 0;
-            Empates.Text = Convert.ToString(empatesPontos);
-            MessageBox.Show("Reiniciado com sucesso!");
+        private void Form1_Load(object sender, EventArgs e)
+        {
         }
 
         private void buttonLimpar_Click(object sender, EventArgs e)
         {
             foreach (Button item in panel1.Controls)
                 item.Text = "";
+
+            if (rodadas == 0)
+                MessageBox.Show("Não existe registro para ser limpo!");
 
             rodadas = 0;
             jogoFinal = false;
